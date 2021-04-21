@@ -1,0 +1,19 @@
+package com.msr.better.client;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.nio.channels.SocketChannel;
+
+/**
+ * @author MaiShuRen
+ * @site https://www.maishuren.top
+ * @since 2021-04-22 00:03
+ **/
+
+public class TestClient {
+    public static void main(String[] args) throws IOException {
+        SocketChannel sc = SocketChannel.open();
+        sc.connect(new InetSocketAddress("localhost", 8080));
+        System.out.println("waiting...");
+    }
+}
