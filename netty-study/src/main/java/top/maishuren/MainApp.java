@@ -1,2 +1,4 @@
-package top.maishuren;public class MainApp {
+package top.maishuren;
+
+public class MainApp {
 }
