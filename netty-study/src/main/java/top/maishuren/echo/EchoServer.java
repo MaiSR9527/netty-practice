@@ -66,7 +66,7 @@ public class EchoServer {
             // 获取Channel的 CloseFuture，并且阻塞当前线程直至完成
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
-            logger.error(e.getMessage());
+            logger.error(e.getMessage(), e);
         } finally {
             // 关闭NioEventLoopGroup释放资源
             group.shutdownGracefully().sync();
