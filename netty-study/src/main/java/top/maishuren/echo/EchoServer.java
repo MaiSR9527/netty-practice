@@ -28,7 +28,8 @@ public class EchoServer {
     public static void main(String[] args) {
         // 从程序启动参数获取端口号
         if (args.length != 1) {
-            logger.error("Usage: {} <port>", EchoServer.class.getSimpleName());
+            logger.error("Usage: {} <port> is missing", EchoServer.class.getSimpleName());
+            return;
         }
         int port = Integer.parseInt(args[0]);
         EchoServer echoServer = new EchoServer(port);
