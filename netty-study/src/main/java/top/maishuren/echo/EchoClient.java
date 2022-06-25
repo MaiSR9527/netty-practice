@@ -55,6 +55,7 @@ public class EchoClient {
         }
         String host = args[0];
         int port = Integer.parseInt(args[1]);
-        new EchoClient(host, port).startClient();
+        EchoClient echoClient = new EchoClient(host, port);
+        echoClient.startClient();
     }
 }

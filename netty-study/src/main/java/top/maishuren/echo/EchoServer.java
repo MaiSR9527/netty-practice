@@ -64,6 +64,7 @@ public class EchoServer {
                     });
             // 异步绑定服务器，调用sync方法阻塞等待绑定完成
             ChannelFuture channelFuture = serverBootstrap.bind().sync();
+            logger.info(this.getClass().getSimpleName()+" started listening on port: {}", channelFuture.channel().localAddress());
             // 获取Channel的 CloseFuture，并且阻塞当前线程直至完成
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
