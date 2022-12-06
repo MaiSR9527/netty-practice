@@ -66,6 +66,7 @@ public class NioEventLoopGroup extends MultithreadEventLoopGroup {
      * {@link SelectorProvider} which is returned by {@link SelectorProvider#provider()}.
      */
     public NioEventLoopGroup(int nThreads, ThreadFactory threadFactory) {
+        // sun.nio.ch.DefaultSelectorProvider 跨平台实现
         this(nThreads, threadFactory, SelectorProvider.provider());
     }
 
